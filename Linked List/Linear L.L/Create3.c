@@ -13,16 +13,20 @@ struct Node{
 int main()
 {
     struct Node *head = NULL;
+    struct Node *first = NULL;
     struct Node *second = NULL;
     struct Node *third = NULL;
 
     head = (struct Node*)malloc(sizeof(struct Node));
+    first = (struct Node*)malloc(sizeof(struct Node));
     second = (struct Node*)malloc(sizeof(struct Node));
     third = (struct Node*)malloc(sizeof(struct Node));
 
-    strcpy(head->name, "Levi Ackerman");
-    head->age = 25;
-    head->next = second;
+    head->next = first;
+
+    strcpy(first->name, "Levi Ackerman");
+    first->age = 25;
+    first->next = second;
 
     strcpy(second->name, "Gojo Satoru");
     second->age = 28;
