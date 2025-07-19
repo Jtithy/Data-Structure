@@ -12,15 +12,19 @@ struct Node{
 int main()
 {
     struct Node *head = NULL;
+    struct Node *first = NULL;
     struct Node *second = NULL;
     struct Node *third = NULL;
 
     head = (struct Node*)malloc(sizeof(struct Node));
+    first = (struct Node*)malloc(sizeof(struct Node));
     second = (struct Node*)malloc(sizeof(struct Node));
     third = (struct Node*)malloc(sizeof(struct Node));
 
-    strcpy(head->data, "First Node");
-    head->next = second;
+    head->next = first;
+
+    strcpy(first->data, "First Node");
+    first->next = second;
 
     strcpy(second->data, "Second Node");
     second->next = third;
