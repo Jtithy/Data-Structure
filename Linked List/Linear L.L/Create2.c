@@ -1,4 +1,4 @@
-//Create a Linear linked list using string data type
+//Create a singly linked list using string data type
 
 #include<stdio.h>
 #include<stdlib.h>
