@@ -1,4 +1,4 @@
-//Search element at a specific position and delete it in a linear linked list
+//Search element at a specific position and delete it in a singly linked list
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -12,16 +12,20 @@ struct Node {
 
 int main() {
     struct Node *head = NULL;
+    struct Node *first = NULL;
     struct Node *second = NULL;
     struct Node *third = NULL;
 
     head = (struct Node*)malloc(sizeof(struct Node));
+    first = (struct Node*)malloc(sizeof(struct Node));
     second = (struct Node*)malloc(sizeof(struct Node));
     third = (struct Node*)malloc(sizeof(struct Node));
 
-    head->data = 10;
-    strcpy(head->data2, "First");
-    head->next = second;
+    head = first;
+
+    first->data = 10;
+    strcpy(first->data2, "First");
+    first->next = second;
 
     second->data = 20;
     strcpy(second->data2, "Second");
@@ -108,6 +112,7 @@ int main() {
 
     // Free allocated memory
     free(head);
+    free(first);
     free(second);
     free(third);
 
