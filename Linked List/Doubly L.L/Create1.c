@@ -23,7 +23,7 @@ int main()
     second = (struct Node*)malloc(sizeof(struct Node));
     third = (struct Node*)malloc(sizeof(struct Node));
 
-    head->next = first;
+    head = first;
 
     first->data = 10;
     first->next = second;
@@ -38,7 +38,7 @@ int main()
     third->prev = second;
 
     printf("Traversing in forward direction:\n");
-    struct Node *current = first;
+    struct Node *current = head;
     printf("NULL ->");
     
     while (current != NULL) {
