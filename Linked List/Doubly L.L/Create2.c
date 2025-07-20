@@ -24,7 +24,7 @@ int main()
     second = (struct Node*)malloc(sizeof(struct Node));
     third = (struct Node*)malloc(sizeof(struct Node));
 
-    head->next = first;
+    head = first;
 
     strcpy(first->data, "Node 1");
     first->next = second;
@@ -38,7 +38,7 @@ int main()
     third->next = NULL;
     third->prev = second;
 
-    struct Node *current = first;
+    struct Node *current = head;
     printf("Traversing in forward direction:\n");
     printf("NULL -> ");
     while (current != NULL) {
