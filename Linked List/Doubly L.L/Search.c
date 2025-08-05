@@ -16,6 +16,7 @@ int main() {
     struct Node *second = NULL;
     struct Node *third = NULL;
 
+    // Allocate nodes in the heap
     head = (struct Node*)malloc(sizeof(struct Node));
     second = (struct Node*)malloc(sizeof(struct Node));
     third = (struct Node*)malloc(sizeof(struct Node));
