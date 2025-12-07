@@ -1,4 +1,4 @@
-//Create a simple queue using an array in C
+//Create a program for Queue insertion and deletion using array.
 
 #include <stdio.h>
 #include <stdlib.h>

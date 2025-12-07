@@ -1,4 +1,4 @@
-//Write Program For Queue Insertion
+//Write Program For Create A Simple Queue Using An Array
 
 #include <stdio.h>
 #define MAX 100
