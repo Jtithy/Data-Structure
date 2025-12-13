@@ -1,4 +1,4 @@
-// Create a binary tree by taking user input.
+// In-order Traversal of a Binary Tree in C
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,13 +40,25 @@ struct Node* buildTree() {
     return root;
 }
 
+// Function for In-order traversal (Left, Root, Right)
+void inOrderTraversal(struct Node* root) {
+    if (root != NULL) {
+        inOrderTraversal(root->left);
+        printf("%d ", root->data);
+        inOrderTraversal(root->right);
+    }
+}
+
 // Main function
 int main() {
     struct Node* root = NULL;
 
     printf("--- Tree Creation ---\n");
     root = buildTree();
-    printf("\nTree creation complete.\n");
+
+    printf("\n--- In-order Traversal ---\n");
+    inOrderTraversal(root);
+    printf("\n");
 
     return 0;
 }
